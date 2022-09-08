@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <div class="property-container">
+        <div class="header">
+            <div class="title-container">
+                <h1 id="property-name">{Property Name}</h1>
+                <span id="type-name">{Type}</span>
+                <span id="street-name">{Street name}</span>
+            </div>
+            <div class="price-container">
+                <h1 id="price">$50,000</h1>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <div class="button" id="exit-button"><span>Exit</span></div>
+            <div class="button" id="purchase-button"><span>Purchase hideout</span></div>
+        </div>
+    </div>
+    <div class="confirmation-modal" id="confirmation-modal">
+        <h2>Are you sure that you want to purchase this hideout?</h2>
+        <div class="buttons-container">
+            <div class="button" id="cancel-button"><span>Cancel</span></div>
+            <div class="button" id="confirm-purchase-button"><span>Purchase hideout</span></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+
+        window.addEventListener('message', (event) => {
+            if (event.data.event === 'show') {
+                if (event.data.state) {
+                    $('body').fadeIn(1000);
+                    $('#property-name').html(event.data.name);
+                    $('#street-name').html(event.data.street);
+                    $('#type-name').html(event.data.type);
+                    $('#price').html('$' + numberWithCommas(event.data.price));
+                } else {
+                    $('body').fadeOut(1000);
+                }
+                $('#confirmation-modal').hide();
+            }
+        });
+
+        $(document).on('click', '#purchase-button', function(){
+            $('#confirmation-modal').show();
+        });
+
+        $(document).on('click', '#cancel-button', function(){
+            $('#confirmation-modal').hide();
+        });
+
+        $(document).on('click', '#confirm-purchase-button', function(){
+            purchaseHideout();
+        });
+
+        function purchaseHideout()
+        {
+            fetch(`https://kq_hideouts/PurchaseHideout`, {
+                method: 'POST',
+            })
+        }
+
+        document.addEventListener('keyup', logKey);
+        function logKey(e) {
+            if (e.key === 'Escape' || e.key === 'Backspace' || e.key === 'e' || e.key === ' ') {
+                closeMenu();
+            }
+        }
+
+        $(document).on('click', '#exit-button', function(){
+            closeMenu();
+        });
+
+        function closeMenu()
+        {
+            fetch(`https://kq_hideouts/CloseMenu`, {
+                method: 'POST',
+            })
+        }
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    });
+</script>
+
+<style>
+    @font-face {
+        font-family: "FjallaOne";
+        src: url('fonts/FjallaOne.ttf') format('truetype');
+    }
+
+    body {
+        font-family: "FjallaOne", sans-serif !important;
+        font-weight: bold;
+        user-select: none;
+        display: none;
+    }
+    .property-container {
+        background-color: rgba(31, 31, 31, 0.8);
+        width: 100%;
+        height: 16vh;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 0 2vh rgba(0,0,0,0.2) inset;
+    }
+
+    .header {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .price-container {
+        height: 3vh;
+        margin: 1vh 2vh 2vh;
+    }
+
+    .price-container h1 {
+        color: white;
+        font-size: 5vh;
+        margin: 0;
+    }
+
+    .title-container {
+        height: 4vh;
+        margin: 1vh 2vh 2vh;
+    }
+
+    .title-container h1 {
+        color: white;
+        font-size: 3vh;
+        margin: 0;
+    }
+
+    .title-container span {
+        color: white;
+        font-size: 1.85vh;
+        margin: 0;
+    }
+
+    #street-name {
+        margin-left: 0.25vh;
+        color: darkgray;
+    }
+
+    #street-name:before {
+        content: "at ";
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .button {
+        width: calc(100% - 4vh);
+        margin: 2vh;
+        height: 4vh;
+        border-radius: 0.4vh;
+        background-color: rgb(130, 130, 130);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition-duration: 0.1s;
+    }
+
+    #purchase-button, #confirm-purchase-button {
+        background-color: #d0971a;
+    }
+
+    .button:hover {
+        filter: brightness(0.8);
+    }
+    .button span {
+        color: white;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        justify-self: center;
+        font-size: 2vh;
+    }
+
+    .confirmation-modal {
+        width: 45vh;
+        height: 16vh;
+        position: fixed;
+        right: 3vh;
+        bottom: 19vh;
+        background-color: rgba(31, 31, 31, 0.8);
+        box-shadow: 0 0 2vh rgba(0,0,0,0.2) inset;
+        border-radius: 1vh;
+    }
+    .confirmation-modal h2 {
+        font-size: 2vh;
+        text-align: center;
+        padding: 0 2vh;
+        color: white;
+    }
+
+    .confirmation-modal .buttons-container {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+</style>

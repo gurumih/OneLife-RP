@@ -1,0 +1,20 @@
+L = {
+    hideout = 'Kryjówka',
+    press_to_exit = 'Naciśnij ~y~[E]~w~, aby wyjść z kryjówki',
+    press_to_enter = 'Naciśnij ~y~[E]~w~, aby wejść do kryjówki',
+    press_to_preview = 'Naciśnij ~y~[E]~w~, aby wyświetlić podgląd kryjówki',
+    garage_hideout_blip = 'Kryjówka w garażu',
+    too_large = '~r~Ten pojazd jest za duży, aby można go było przechowywać w tej kryjówce',
+    hideout_purchased = '~g~Kryjówka kupiona',
+    not_near_vehicle = '~r~Nie w pobliżu żadnego pojazdu',
+    wash_the_vehicle = 'Umyj pojazd',
+    repair_the_vehicle = 'Napraw pojazd',
+    blacklisted = '~r~Ten pojazd nie może być przechowywany w kryjówce (klasa pojazdu na czarnej liście)',
+    blacklisted_model = '~r~Ten pojazd nie może być przechowywany w kryjówce (model pojazdu na czarnej liście)',
+    cant_repair = '~r~Nie możesz naprawić tego pojazdu',
+    no_money = '~r~Nie możesz sobie na to pozwolić',
+    hideout_full = '~r~Ta kryjówka jest pełna',
+    currency_symbol = '$',
+    player_owned = '~r~Ten pojazd ma urządzenie śledzące i dlatego nie może być przechowywany w kryjówce',
+    cant_exit = '~r~W tej chwili nie możesz wyjść ze swojej kryjówki'
+}

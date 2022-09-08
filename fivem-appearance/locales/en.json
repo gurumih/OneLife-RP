@@ -1,0 +1,150 @@
+{
+  "modal": {
+    "save": {
+      "title": "Zapisz outfit",
+      "description": "Jesteś pewny?"
+    },
+    "exit": {
+      "title": "Wyjdz z przebieralni",
+      "description": "Żadne zmiany nie zostaną zapisane"
+    },
+    "accept": "Tak",
+    "decline": "Nie"
+  },
+  "ped": {
+    "title": "Ped",
+    "model": "Model"
+  },
+  "headBlend": {
+    "title": "Podobizna",
+    "shape": {
+      "title": "Twarz",
+      "firstOption": "Ojciec",
+      "secondOption": "Matka",
+      "mix": "Mix"
+    },
+    "skin": {
+      "title": "kolor skóry",
+      "firstOption": "Ojciec",
+      "secondOption": "Matka",
+      "mix": "Mix"
+    },
+    "race": {
+      "title": "inne",
+      "shape": "kształt",
+      "skin": "Skin",
+      "mix": "Mix"
+    }
+  },
+  "faceFeatures": {
+    "title": "Twarz",
+    "nose": {
+      "title": "Nos",
+      "width": "Szerokość",
+      "height": "Wielkość",
+      "size": "rozmiar",
+      "boneHeight": "Wysokość kości",
+      "boneTwist": "Skręcenie kości",
+      "peakHeight": "Wysokość szczytu"
+    },
+    "eyebrows": {
+      "title": "Brwi",
+      "height": "Wielkość",
+      "depth": "Głębokość"
+    },
+    "cheeks": {
+      "title": "Policzki",
+      "boneHeight": "Wysokość kości",
+      "boneWidth": "Szerokość kości",
+      "width": "Szerokość"
+    },
+    "eyesAndMouth": {
+      "title": "Oczy i usta",
+      "eyesOpening": "Otwieranie oczu",
+      "lipsThickness": "Grubość warg"
+    },
+    "jaw": {
+      "title": "Szczęka",
+      "width": "Szerokość",
+      "size": "Rozmiar"
+    },
+    "chin": {
+      "title": "Podbródek",
+      "lowering": "Opuszczenie",
+      "length": "Długość",
+      "size": "Rozmiar",
+      "hole": "Rozmiar dziury"
+    },
+    "neck": {
+      "title": "Szyja",
+      "thickness": "Grubość"
+    }
+  },
+  "headOverlays": {
+    "title": "Wygląd zewnętrzny",
+    "hair": {
+      "title": "Włosy",
+      "style": "Styl",
+      "color": "Kolor",
+      "highlight": "Highlight",
+      "texture": "Texture",
+      "fade": "Fade"
+    },
+    "opacity": "Nieprzezroczystość",
+    "style": "Styl",
+    "color": "Kolor",
+    "secondColor": "Kolor wtórny",
+    "blemishes": "Wypryski",
+    "beard": "Broda",
+    "eyebrows": "Brwi",
+    "ageing": "Starzenie się",
+    "makeUp": "Make up",
+    "blush": "Rumieniec",
+    "complexion": "Cera",
+    "sunDamage": "Opalenizna",
+    "lipstick": "Pomadka",
+    "moleAndFreckles": "Pieki",
+    "chestHair": "Włosy na klacie",
+    "bodyBlemishes": "Skazy ciała",
+    "eyeColor": "Kolor oczu"
+  },
+  "components": {
+    "title": "Ubrania",
+    "drawable": "Model",
+    "texture": "Texture",
+    "mask": "Maska",
+    "upperBody": "Ręce",
+    "lowerBody": "Spodnie",
+    "bags": "Plecak",
+    "shoes": "Buty",
+    "scarfAndChains": "Szalik i łańcuchy",
+    "shirt": "Koszula",
+    "bodyArmor": "Kamizelka",
+    "decals": "Detale",
+    "jackets": "Kurtka"
+  },
+  "props": {
+    "title": "Dodatki",
+    "drawable": "Model",
+    "texture": "Texture",
+    "hats": "Nakrycie głowy",
+    "glasses": "Okulary",
+    "ear": "uszy",
+    "watches": "zegarek",
+    "bracelets": "Branzoletki"
+  },
+  "tattoos": {
+    "title": "Tatuaże",
+    "items": {
+      "ZONE_TORSO": "Tułów",
+      "ZONE_HEAD": "Głowa",
+      "ZONE_LEFT_ARM": "Lewa ręka",
+      "ZONE_RIGHT_ARM": "Prawa ręka",
+      "ZONE_LEFT_LEG": "Lewa noga",
+      "ZONE_RIGHT_LEG": "Prawa noga"
+    },
+    "apply": "Potwierdź",
+    "delete": "Usuń",
+    "deleteAll": "Usuń wszystkie tatuaże"
+  }
+}

@@ -1,0 +1,42 @@
+[
+    {
+        "app": "Youtube",
+        "active": true
+    },
+    {
+        "app": "Radio",
+        "active": true
+    },
+    {
+        "app": "YellowPage",
+        "active": true
+    },
+    {
+        "app": "Bank",
+        "active": true
+    },
+    {
+        "app": "Clock",
+        "active": true
+    },
+    {
+        "app": "GPS",
+        "active": true
+    },
+    {
+        "app": "Calculator",
+        "active": true
+    },
+    {
+        "app": "Music",
+        "active": true
+    },
+    {
+        "app": "Games",
+        "active": true
+    },
+    {
+        "app": "Encrochat",
+        "active": true
+    }
+]
